@@ -57,6 +57,7 @@ def on_key_press(symbol, modifiers):
     action = np.array([0.0, 0.0])
     if symbol == key.BACKSPACE or symbol == key.SLASH:
         print("RESET")
+        Map.screen.reset()
         env.reset()
         env.render()
     elif symbol == key.PAGEUP:
@@ -156,6 +157,7 @@ def update(dt):
     # print(env.cur_angle * 57.30228433094796)
 
     if done:
+        Map.screen.reset()
         print("done!")
         env.reset()
         env.render()
