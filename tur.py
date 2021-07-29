@@ -149,6 +149,7 @@ def update(dt):
     # Speed boost
     if key_handler[key.LSHIFT]:
         action *= 1.5
+        Map.snake.speed(5) #надо подобрать от 1 до 10, чтобы ускорялось в 2 раза
 
     alfa_0 = env.cur_angle * 57.30228433094796
 
